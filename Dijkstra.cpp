@@ -37,8 +37,12 @@ int main(){
 	Dijkstra(s);
 	cout<<d[f]<<endl;
 	int j=f;
+	vector<int>ans;
 	while(j!=s){
-		cout<<j<<' ';
+		ans.push_back(j);
 		j=p[j];
 	}
+	ans.push_back(s);
+	for(int i=0;i<ans.size();i++)
+		cout<<a[i]<<' ';
 }
